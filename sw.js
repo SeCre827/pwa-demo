@@ -10,6 +10,7 @@ const APP_STATIC_RESOURCES = [
   "/index.html",
   "/app.js",
   "/style.css",
+  "/cycletracker.json",
   "/icons/wheel.svg",
 ];
 
@@ -58,6 +59,7 @@ self.addEventListener("fetch", (event) => {
         // Return the cached response if it's available.
         return cachedResponse;
       }
+      
       // If resource isn't in the cache, return a 404.
       return new Response(null, { status: 404 });
     })(),
